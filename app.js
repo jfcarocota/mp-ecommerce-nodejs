@@ -33,5 +33,14 @@ app.get('/detail', (req, res)=> res.render('detail', req.query));
 
 app.get('/notifications', (req, res) => res.send('hello notifications'));
 
+app.post('/checkout', (request, response) =>{
+    const preference = request.body;
+
+    mercadopago.preferences.create(preference)
+    .then(res => response.send(res.body));
+
+    //response.send(taco);
+});
+
 
 app.listen(port);
