@@ -34,8 +34,8 @@ app.get('/detail', (req, res)=> res.render('detail', req.query));
 app.post('/notifications', (request, response) => {
     //const data = request.body;
     mercadopago.ipn.manage(request.body)
-    .then(res => res.json())
-    .then(data => response.send(data));
+    .then(data => response.send(data.body))
+    .then((error) => console.log(error));
 });
 /*Ejemplo: Si configuraste la notification_url: 
 https://www.yoursite.com/notifications, 
