@@ -2,6 +2,7 @@ var express = require('express');
 var exphbs  = require('express-handlebars');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const mercadopago = require('mercadopago');
 
@@ -14,6 +15,8 @@ mercadopago.configure({
 const port = process.env.PORT
 
 var app = express();
+
+app.use(cors());
 
 app.use(bodyParser.json());
  
