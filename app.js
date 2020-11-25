@@ -32,11 +32,12 @@ app.get('/', (req, res)=> res.render('home'));
 app.get('/detail', (req, res)=> res.render('detail', req.query));
 
 app.post('/notifications', (request, response) => {
-    //const data = request.body;
-    mercadopago.ipn.manage(request)
+    const data = request.body;
+    /*mercadopago.ipn.manage(request)
     .then(data => response.render('jsonobject',{
         resul: data
-    }));
+    }));*/
+    response.send(data);
 });
 
 app.post('/checkout', (request, response) =>{
