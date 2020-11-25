@@ -31,7 +31,13 @@ app.get('/', (req, res)=> res.render('home'));
 
 app.get('/detail', (req, res)=> res.render('detail', req.query));
 
-app.get('/notifications', (req, res) => res.send('hello notifications'));
+app.post('/notifications', (request, response) => {
+    //const data = request.body;
+    mercadopago.ipn.manage(request)
+    .then(data => response.render('jsonobject',{
+        resul: data
+    }));
+});
 
 app.post('/checkout', (request, response) =>{
     const preference = request.body;
