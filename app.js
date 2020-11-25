@@ -1,8 +1,21 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
-var port = process.env.PORT || 3000
+const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
+
+const mercadopago = require('mercadopago');
+
+dotenv.config();
+
+mercadopago.configure({
+    access_token: process.env.ACCESS_TOKEN
+});
+
+const port = process.env.PORT
 
 var app = express();
+
+app.use(bodyParser.json());
  
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
@@ -11,13 +24,9 @@ app.use(express.static('assets'));
  
 app.use('/assets', express.static(__dirname + '/assets'));
 
-app.get('/', function (req, res) {
-    res.render('home');
-});
+app.get('/', (req, res)=> res.render('home'));
 
-app.get('/detail', function (req, res) {
-    res.render('detail', req.query);
-});
+app.get('/detail', (req, res)=> res.render('detail', req.query));
 
 app.get('/notifications', (req, res) => res.send('hello notifications'));
 
