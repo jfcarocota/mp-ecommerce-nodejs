@@ -13,7 +13,7 @@ let preference = {
 
 const payment = ()=>{
     //console.log(preference);
-    fetch('http://localhost:3000/checkout', {
+    fetch('https://jfcarocota-mp-commerce-nodejs.herokuapp.com/checkout', {
         method: 'post',
         body: JSON.stringify(preference),
         headers: {
