@@ -33,10 +33,14 @@ app.get('/detail', (req, res)=> res.render('detail', req.query));
 
 app.post('/notifications', (request, response) => {
     //const data = request.body;
-    mercadopago.ipn.manage(request)
+    mercadopago.ipn.manage(request.body)
     .then(data => response.render(data))
     .then((error) => console.log(error));
 });
+/*Ejemplo: Si configuraste la notification_url: 
+https://www.yoursite.com/notifications, 
+recibirás notificaciones de pago de esta manera: 
+https://www.yoursite.com/notifications?topic=payment&id=123456789 */
 
 app.post('/checkout', (request, response) =>{
     const preference = request.body;
