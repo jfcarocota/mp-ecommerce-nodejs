@@ -19,4 +19,7 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
+app.get('/notifications', (req, res) => res.send('hello notifications'));
+
+
 app.listen(port);
