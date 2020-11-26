@@ -3,7 +3,10 @@ const btnPayment = document.getElementById('checkout');
 let preference = {
     items: [
       {
+        id: 1234,
         title: document.getElementById('title').innerHTML,
+        description: 'Dispositivo móvil de Tienda e-commerce',
+        picture_url: document.getElementById('image').src,
         quantity: parseInt(document.getElementById('unit').innerHTML),
         currency_id: 'MXN',
         unit_price: parseFloat(document.getElementById('price').innerHTML),
@@ -23,7 +26,8 @@ let preference = {
         ],
         installments: 12
     },
-    notification_url: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/notifications'
+    notification_url: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/notifications',
+    external_reference: 'jfcarocota@gmail.com'
 }
 
 const payment = ()=>{
