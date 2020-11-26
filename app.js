@@ -37,7 +37,7 @@ app.post('/notifications', (request, response) => {
     /*mercadopago.ipn.manage(request.body)
     .then(data => response.send(data))
     .then((error) => console.log(error));*/
-    console.log(request.body);
+    //console.log(request.body);
     response.send(request.body);
 });
 /*Ejemplo: Si configuraste la notification_url: 
@@ -50,7 +50,7 @@ app.post('/checkout', (request, response) =>{
 
     mercadopago.preferences.create(preference)
     .then(res => {
-        console.log(res.body);
+        //console.log(res.body);
         response.send(res.body);
     });
 });
