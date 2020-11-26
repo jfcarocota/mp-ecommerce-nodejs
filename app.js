@@ -9,7 +9,8 @@ const mercadopago = require('mercadopago');
 dotenv.config();
 
 mercadopago.configure({
-    access_token: process.env.ACCESS_TOKEN
+    access_token: process.env.ACCESS_TOKEN,
+    integrator_id: process.env.INTEGRATOR_ID
 });
 
 const port = process.env.PORT
