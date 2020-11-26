@@ -28,8 +28,8 @@ let preference = {
     },
     back_urls: {
         success: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/',
-        failure: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/',
-        pending: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/'
+        failure: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/failure',
+        pending: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/pending'
     },
     auto_return: 'approved',
     payment_methods: {
