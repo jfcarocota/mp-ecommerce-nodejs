@@ -12,6 +12,20 @@ let preference = {
         unit_price: parseFloat(document.getElementById('price').innerHTML),
       }
     ],
+    payer: {
+        name: 'Lalo',
+        surname: 'Landa',
+        email: 'test_user_81131286@testuser.com',
+        phone: {
+            area_code: 52,
+            number: 5549737300
+        },
+        address: {
+            street_name: 'Insurgentes Sur',
+            street_number: 1602,
+            zip_code: '03940'
+        }
+    },
     back_urls: {
         success: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/',
         failure: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/',
