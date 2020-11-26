@@ -12,7 +12,7 @@ let preference = {
             failure: window.location.href,
             pending: window.location.href
         },
-        auto_return: approved,
+        auto_return: 'approved',
       }
     ]
 }
