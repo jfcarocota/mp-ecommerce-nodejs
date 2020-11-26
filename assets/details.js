@@ -1,4 +1,4 @@
-//const btnPayment = document.getElementById('checkout');
+const btnPayment = document.getElementById('checkout');
 
 let preference = {
     items: [
@@ -63,6 +63,6 @@ const payment = ()=>{
     });
 }
 
-payment();
+//payment();
 
-//btnPayment.onclick = payment;
+btnPayment.onclick = payment;
