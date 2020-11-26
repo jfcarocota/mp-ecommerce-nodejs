@@ -7,14 +7,23 @@ let preference = {
         quantity: parseInt(document.getElementById('unit').innerHTML),
         currency_id: 'MXN',
         unit_price: parseFloat(document.getElementById('price').innerHTML),
-        back_urls: {
-            success: window.location.href,
-            failure: window.location.href,
-            pending: window.location.href
-        },
-        auto_return: 'approved',
       }
-    ]
+    ],
+    back_urls: {
+        success: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/',
+        failure: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/',
+        pending: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/'
+    },
+    auto_return: 'approved',
+    payment_methods: {
+        excluded_payment_methods: [
+            {
+                id: 'american'
+            }
+        ],
+        installments: 12
+    },
+    notification_url: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/notifications'
 }
 
 const payment = ()=>{
