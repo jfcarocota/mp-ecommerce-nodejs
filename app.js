@@ -50,6 +50,7 @@ app.post('/checkout', (request, response) =>{
 
     mercadopago.preferences.create(preference)
     .then(res => {
+        global.id = res.body.id;
         console.log(res.body);
         response.send(res.body);
     });
