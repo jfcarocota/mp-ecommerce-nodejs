@@ -17,7 +17,7 @@ let preference = {
         surname: 'Landa',
         email: 'test_user_81131286@testuser.com',
         phone: {
-            area_code: 52,
+            area_code: '52',
             number: 5549737300
         },
         address: {
