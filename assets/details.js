@@ -59,7 +59,8 @@ const payment = ()=>{
         }
     }).then(res => res.json()).then(payment => {
         console.log(payment);
-        window.open(payment.init_point);
+        //window.open(payment.init_point);
+        window.open(payment.init_point,'_self');
     });
 }
 
