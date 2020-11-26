@@ -50,7 +50,7 @@ app.post('/checkout', (request, response) =>{
 
     mercadopago.preferences.create(preference)
     .then(res => {
-        //console.log(res.body);
+        console.log(res.body);
         response.send(res.body);
     });
 });
