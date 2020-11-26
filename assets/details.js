@@ -21,7 +21,12 @@ let preference = {
     payment_methods: {
         excluded_payment_methods: [
             {
-                id: 'american'
+                id: 'amex'
+            }
+        ],
+        excluded_payment_types: [
+            {
+                id: 'atm'
             }
         ],
         installments: 12
