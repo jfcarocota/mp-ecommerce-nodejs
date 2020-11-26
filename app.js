@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const mercadopago = require('mercadopago');
+const helmet = require("helmet");
+
 
 dotenv.config();
 
@@ -18,6 +20,10 @@ const port = process.env.PORT
 var app = express();
 
 app.use(cors());
+
+app.use(helmet({
+    frameguard: false
+  }));
 
 app.use(bodyParser.json());
  
