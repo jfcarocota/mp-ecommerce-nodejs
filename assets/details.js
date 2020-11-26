@@ -63,4 +63,6 @@ const payment = ()=>{
     });
 }
 
-btnPayment.onclick = payment;
+payment();
+
+//btnPayment.onclick = payment;
