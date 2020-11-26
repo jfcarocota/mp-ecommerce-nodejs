@@ -1,4 +1,4 @@
-const btnPayment = document.querySelector('#pay');
+//const btnPayment = document.getElementById('checkout');
 
 let preference = {
     items: [
@@ -64,7 +64,5 @@ const payment = ()=>{
 }
 
 payment();
-
-console.log(btnPayment);
 
 //btnPayment.onclick = payment;
