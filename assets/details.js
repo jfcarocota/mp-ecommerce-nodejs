@@ -43,7 +43,7 @@ let preference = {
                 id: 'atm'
             }
         ],
-        installments: 12
+        installments: 6
     },
     notification_url: 'https://jfcarocota-mp-commerce-nodejs.herokuapp.com/notifications',
     external_reference: 'jfcarocota@gmail.com'
