@@ -48,8 +48,6 @@ app.post('/checkout', (request, response) =>{
 
     mercadopago.preferences.create(preference)
     .then(res => response.send(res.body));
-
-    //response.send(taco);
 });
 
 

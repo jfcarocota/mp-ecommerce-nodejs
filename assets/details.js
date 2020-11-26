@@ -6,7 +6,13 @@ let preference = {
         title: document.getElementById('title').innerHTML,
         quantity: parseInt(document.getElementById('unit').innerHTML),
         currency_id: 'MXN',
-        unit_price: parseFloat(document.getElementById('price').innerHTML)
+        unit_price: parseFloat(document.getElementById('price').innerHTML),
+        back_urls: {
+            success: window.location.href,
+            failure: window.location.href,
+            pending: window.location.href
+        },
+        auto_return: approved,
       }
     ]
 }
